@@ -1,0 +1,29 @@
+<%- include("partials/header"); %>
+
+<h1 >Compose</h1>
+
+<div class="form-group">
+    <form action="/compose" method="POST">
+        <label for="postTitle" class="titleLabel"> Title  </label>
+        <input class="form-control" type="text" name="postTitle" autofocus>
+        <textarea id="myTextArea" onfocusout="shrinkTextArea()" onfocus="expandTextArea()"class="form-control" name="postBody" cols="80" rows='4'></textarea>
+        <label for="postBody" class="bodyLabel">Content</label> 
+        
+        <br>
+
+        <button class="btn btn-primary" type="submit">Publish</button>
+    </form>
+</div>
+<script>
+    const expandTextArea = function(){
+        document.getElementById("myTextArea").rows="10";
+        console.log("functioncalled");
+    }
+    const shrinkTextArea = function(){
+        document.getElementById("myTextArea").rows="5";
+
+    }
+
+</script>
+
+<%- include("partials/footer") %>

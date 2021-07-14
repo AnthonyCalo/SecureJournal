@@ -1,0 +1,224 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.container{
+    background-color: white;
+    color: black;
+
+}
+.navbar-brand{
+    color: rgb(10, 35, 253);
+}
+
+.navbar_items{
+  vertical-align: middle;
+
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+.container h1{
+    font-size: 3rem;
+    color: white;
+}
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #131010de;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 20px;
+  color: #fff;
+}
+.composeContent{
+    width: 85%;
+    margin: auto;
+    height: 350px;
+}
+label{
+    
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+
+}
+.container p{
+    color: white;
+}
+.composeTitle{
+    width: 85%;
+    margin: 10px auto 25px;
+
+}
+.lead{
+    display: inline-block;
+    white-space: pre-line;
+
+}
+
+button{
+    width: 150px;
+    height: 75px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 25px;
+}
+button:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+.navbar-itemZ{
+    /* display: inline-block; */
+    float: right;
+    margin-top: 10px;
+    word-spacing: 2rem;
+    padding-right: 100px;
+    vertical-align: middle;
+
+
+}
+/* .navbar {
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color:rgb(255, 255, 255);
+} */
+.navbar{
+    background-color: rgb(22, 31, 28);
+  height: 3rem;
+  color: white;
+  padding-top: 15px;
+  
+
+
+}
+h2 a{
+  color: white;
+
+}
+.navbar h2{
+  display: inline;  
+  color: white;
+
+  margin-left: 2em;
+  vertical-align: middle;
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+}
+li a{
+    text-decoration: none;
+  color: white;
+
+}
+ul{
+    display: inline;
+    margin-left: 0;
+    padding-bottom: 1rem;
+}
+
+.titleLabel{
+    text-align: left;
+    float: left;
+    margin-top: 4rem;
+    margin-left:1.5rem;
+}
+.bodyLabel{
+    text-align: left;
+    float: left;
+    padding-right: 0;
+    margin-left: 1.5rem;
+    margin-top: 8rem;
+
+    margin-right: 0;
+}
+li{
+    display: inline;
+    padding-bottom: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+body{
+    margin: 0;
+    background-color: #5e0d32;
+    background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
+
+}
+.container{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    background: transparent;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.form-group-hidden{
+    visibility: hidden;
+}
+input{
+    height: 1.5rem;
+    font-size: 40px;
+  color: #E8E8E8;
+  display: inline;
+  width: 80%;
+  min-height: auto;
+  margin: 30px auto 0 auto;
+  background-color: #497959;
+  padding: 20px 30px;
+  overflow-y: auto;
+  box-shadow: -1px 2px 2px 0px #555, inset 0 0 10px 0 #555;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: #B78240 solid 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+textarea{
+    font-size: 25px;
+  color: #E8E8E8;
+  display: inline;
+  width: 80%;
+  min-height: auto;
+  margin-top: 30px;
+  margin-right: 25px;
+  background-color: #497959;
+  padding: 20px 30px;
+  overflow-y: auto;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: #B78240 solid 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+};
+
+
+
+
