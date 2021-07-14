@@ -1,72 +1,18 @@
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-
-.container{
-    background-color: white;
-    color: black;
+body{
+    margin: 0;
+    background-color: #5e0d32;
+    background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
 
 }
-.navbar-brand{
-    color: rgb(10, 35, 253);
-}
+.bodyLabel{
+    text-align: left;
+    float: left;
+    padding-right: 0;
+    margin-left: 1.5rem;
+    margin-top: 8rem;
 
-.navbar_items{
-  vertical-align: middle;
-
+    margin-right: 0;
 }
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
-}
-.container h1{
-    font-size: 3rem;
-    color: white;
-}
-.footer-padding {
-	padding-bottom: 60px;
-}
-
-.footer {
-	position: fixed;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 50px;
-	background-color: #131010de;
-}
-
-.footer p {
-	margin-top: 25px;
-	font-size: 20px;
-  color: #fff;
-}
-.composeContent{
-    width: 85%;
-    margin: auto;
-    height: 350px;
-}
-label{
-    
-    display: inline-block;
-    color: white;
-    font-size: 1.5rem;
-
-}
-.container p{
-    color: white;
-}
-.composeTitle{
-    width: 85%;
-    margin: 10px auto 25px;
-
-}
-.lead{
-    display: inline-block;
-    white-space: pre-line;
-
-}
-
 button{
     width: 150px;
     height: 75px;
@@ -82,84 +28,14 @@ button:hover{
     background-color: blue;
     cursor: pointer;
 }
-
-.navbar-itemZ{
-    /* display: inline-block; */
-    float: right;
-    margin-top: 10px;
-    word-spacing: 2rem;
-    padding-right: 100px;
-    vertical-align: middle;
-
-
-}
-/* .navbar {
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-    background-color:rgb(255, 255, 255);
-} */
-.navbar{
-    background-color: rgb(22, 31, 28);
-  height: 3rem;
-  color: white;
-  padding-top: 15px;
-  
-
-
-}
-h2 a{
-  color: white;
-
-}
-.navbar h2{
-  display: inline;  
-  color: white;
-
-  margin-left: 2em;
-  vertical-align: middle;
-  font-family: Papyrus, fantasy;
-  font-weight: bold;
-}
-li a{
-    text-decoration: none;
-  color: white;
-
-}
-ul{
-    display: inline;
-    margin-left: 0;
-    padding-bottom: 1rem;
-}
-
-.titleLabel{
-    text-align: left;
-    float: left;
-    margin-top: 4rem;
-    margin-left:1.5rem;
-}
-.bodyLabel{
-    text-align: left;
-    float: left;
-    padding-right: 0;
-    margin-left: 1.5rem;
-    margin-top: 8rem;
-
-    margin-right: 0;
-}
-li{
-    display: inline;
-    padding-bottom: 1rem;
+.composeContent{
+    width: 85%;
     margin: auto;
-    margin-bottom: 1rem;
+    height: 350px;
 }
-body{
-    margin: 0;
-    background-color: #5e0d32;
-    background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
+.composeTitle{
+    width: 85%;
+    margin: 10px auto 25px;
 
 }
 .container{
@@ -169,33 +45,126 @@ body{
     font-weight: bold;
     color: rgb(0, 0, 0);
 }
+.container h1{
+    font-size: 3rem;
+    color: white;
+}
+.container p{
+    color: white;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.container{
+    background-color: white;
+    color: black;
+
+}
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #131010de;
+}
+.footer p {
+	margin-top: 25px;
+	font-size: 20px;
+  color: #fff;
+}
+.footer-padding {
+	padding-bottom: 60px;
+}
+
 .form-group-hidden{
     visibility: hidden;
 }
+h2 a{
+    color: white;
+}
+
 input{
     height: 1.5rem;
     font-size: 40px;
-  color: #E8E8E8;
-  display: inline;
-  width: 80%;
-  min-height: auto;
-  margin: 30px auto 0 auto;
-  background-color: #497959;
-  padding: 20px 30px;
-  overflow-y: auto;
-  box-shadow: -1px 2px 2px 0px #555, inset 0 0 10px 0 #555;
-  -webkit-border-radius: 10px;
-  -khtml-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  border: #B78240 solid 10px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+    color: #E8E8E8;
+    display: inline;
+    width: 80%;
+    min-height: auto;
+    margin: 30px auto 0 auto;
+    background-color: #497959;
+    padding: 20px 30px;
+    overflow-y: auto;
+    box-shadow: -1px 2px 2px 0px #555, inset 0 0 10px 0 #555;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    border: #B78240 solid 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+label{ 
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+}
+.lead{
+    display: inline-block;
+    white-space: pre-line;
 
 }
+li{
+    display: inline;
+    padding-bottom: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+li a{
+    text-decoration: none;
+  color: white;
+
+}
+.navbar{
+    background-color: rgb(22, 31, 28);
+  height: 3rem;
+  color: white;
+  padding-top: 15px;
+}
+.navbar-brand{
+    color: rgb(10, 35, 253);
+}
+
+.navbar_items{
+  vertical-align: middle;
+
+}
+.navbar-itemZ{
+    /* display: inline-block; */
+    float: right;
+    margin-top: 10px;
+    word-spacing: 2rem;
+    padding-right: 100px;
+    vertical-align: middle;
+}
+.navbar h2{
+    display: inline;  
+    color: white;
+    margin-left: 2em;
+    vertical-align: middle;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+  }
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
 textarea{
     font-size: 25px;
   color: #E8E8E8;
@@ -218,6 +187,17 @@ textarea{
   background-repeat: no-repeat;
   position: relative;
 };
+.titleLabel{
+    text-align: left;
+    float: left;
+    margin-top: 4rem;
+    margin-left:1.5rem;
+}
+ul{
+    display: inline;
+    margin-left: 0;
+    padding-bottom: 1rem;
+}
 
 
 
