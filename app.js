@@ -56,16 +56,20 @@ passport.deserializeUser(User.deserializeUser());
 //displays all journal entries to read journal
 app.get('/entries', function(req, res){
   //console.log(posts);
-  blogPosts.find({}, function(err, blogs){
-    if(err){
-      console.log(err);
-    }else{
-      //console.log(blogs);
-      res.render("entriesPage", {
-         posts: blogs
-        });
-    }
-  })
+  if(req.isAuthenticated()){
+    blogPosts.find({}, function(err, blogs){
+      if(err){
+        console.log(err);
+      }else{
+        //console.log(blogs);
+        res.render("entriesPage", {
+          posts: blogs
+          });
+      }
+    })
+  }else{
+    res.redirect("/login");
+  }
   
 })
 
@@ -162,13 +166,10 @@ app.post('/compose', function(req, res){
 app.get("/posts/:postName", function(req,res){
   if(req.isAuthenticated()){
     const requestTitle = req.params.postName;
-    const postsList = posts;
-    console.log(requestTitle);
 
 
     blogPosts.findOne({title: requestTitle}, function(err, blog){
       if(!err){
-
         res.render("post", {postTitle: blog.title, postBody: blog.post});
       }else{
         console.log("not a post");
