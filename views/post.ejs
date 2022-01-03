@@ -2,5 +2,7 @@
 
 <h1><%= postTitle %></h1>
 <p class="lead"><%= postBody %></p>
-
+<form action="/posts/<%= postId %>" method="POST">
+    <button type="submit">Delete</button>
+</form>
 <%- include("partials/footer") %>

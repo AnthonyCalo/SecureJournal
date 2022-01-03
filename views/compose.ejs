@@ -6,7 +6,7 @@
     <form action="/compose" method="POST">
         <label for="postTitle" class="titleLabel"> Title  </label>
         <input class="form-control" type="text" name="postTitle" autofocus>
-        <textarea id="myTextArea" onfocusout="shrinkTextArea()" onfocus="expandTextArea()"class="form-control" name="postBody" cols="80" rows='4'></textarea>
+        <textarea id="myTextArea" onfocus="expandTextArea()"class="form-control" name="postBody" cols="80" rows='4'></textarea>
         <label for="postBody" class="bodyLabel">Content</label> 
         
         <br>
@@ -16,7 +16,7 @@
 </div>
 <script>
     const expandTextArea = function(){
-        document.getElementById("myTextArea").rows="10";
+        document.getElementById("myTextArea").rows="12";
         console.log("functioncalled");
     }
     const shrinkTextArea = function(){

@@ -62,8 +62,8 @@ label{
 
 }
 .lead{
-    display: inline-block;
     white-space: pre-line;
+    text-align: center;
 
 }
 

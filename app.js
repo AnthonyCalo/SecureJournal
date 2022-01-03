@@ -29,6 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //connectint to 2 different mongo databases. One will be used to store journal entries and the other to sign in
+//In retrospect this is a silly design. Can just have multiple tables in the same database
 var conn = mongoose.createConnection('mongodb://localhost:27017/blogDB',  { useUnifiedTopology: true, useNewUrlParser: true });
 var conn2 = mongoose.createConnection('mongodb://localhost:27017/blogSignDB',  { useUnifiedTopology: true, useNewUrlParser: true });
 conn.set("useCreateIndex", true);
@@ -170,7 +171,8 @@ app.get("/posts/:postName", function(req,res){
 
     blogPosts.findOne({title: requestTitle}, function(err, blog){
       if(!err){
-        res.render("post", {postTitle: blog.title, postBody: blog.post});
+        console.log(blog)
+        res.render("post", {postTitle: blog.title, postBody: blog.post, postId:blog._id});
       }else{
         console.log("not a post");
         res.send("Not a post");
@@ -179,17 +181,20 @@ app.get("/posts/:postName", function(req,res){
   }else{
     res.redirect('/login');
   }
+})
 
- 
-  
-
- 
-
-  
-  
-  
-
-
+app.post("/posts/:postId", (req, res)=>{
+  //post request will come from entriesPage.ejs
+  // need to add confirmation. Currently 2 easy to delete
+  if(req.isAuthenticated()){
+      blogPosts.deleteOne({_id: req.params.postId}, function(err){
+        if(err){
+          throw err;
+        }else{
+          res.redirect('/entries');
+        }
+    })
+  }
 })
 
 
