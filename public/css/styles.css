@@ -6,6 +6,7 @@
 .container{
     background-color: white;
     color: black;
+    padding-top: 3rem;
 
 }
 .navbar-brand{
@@ -90,8 +91,6 @@ button:hover{
     word-spacing: 2rem;
     padding-right: 100px;
     vertical-align: middle;
-
-
 }
 /* .navbar {
     padding-bottom: 15px;
@@ -106,7 +105,11 @@ button:hover{
     background-color: rgb(22, 31, 28);
   height: 3rem;
   color: white;
+  top: 0;
+  width: 100%;
   padding-top: 15px;
+  position: fixed;
+  margin-bottom: 3 rem;
   
 
 

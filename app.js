@@ -28,16 +28,17 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-//connectint to 2 different mongo databases. One will be used to store journal entries and the other to sign in
-//In retrospect this is a silly design. Can just have multiple tables in the same database
+
 var conn = mongoose.createConnection('mongodb://localhost:27017/blogDB',  { useUnifiedTopology: true, useNewUrlParser: true });
-var conn2 = mongoose.createConnection('mongodb://localhost:27017/blogSignDB',  { useUnifiedTopology: true, useNewUrlParser: true });
 conn.set("useCreateIndex", true);
+
+
 
 const signinSchema= new mongoose.Schema({
   username: String,
   password: String
 })
+//could add user.id as a foreign key and have multiple users. But since this is a personal journal it is unnecessary
 const blogSchema = {
   title: String,
   post: String
@@ -47,7 +48,7 @@ signinSchema.plugin(passportLocalMongoose);
 
 
 const blogPosts = conn.model("blogPosts", blogSchema);
-const User = conn2.model("sign-in", signinSchema);
+const User = conn.model("sign-in", signinSchema);
 
 passport.use(User.createStrategy());
 
