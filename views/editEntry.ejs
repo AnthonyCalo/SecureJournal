@@ -1,0 +1,19 @@
+<%- include("partials/header"); %>
+
+<h1><%= postTitle %></h1>
+
+<div class="form-group">
+    <form action="/edit/<%= postId %>" method="POST">
+        
+        <textarea id="myTextArea" onfocus="expandTextArea()"class="form-control" name="postBody" cols="80" rows='16'>
+            <%= postBody %>
+        </textarea>
+        <input type="text" name="postID" id="postID" value="<%= postId %>" class="hideInput">
+        <br>
+
+        <button class="btn btn-primary" type="submit">Publish</button>
+    </form>
+</div>
+
+
+<%- include("partials/footer") %>

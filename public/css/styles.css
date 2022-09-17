@@ -54,9 +54,6 @@ label{
     font-size: 1.5rem;
 
 }
-.container p{
-    color: white;
-}
 .composeTitle{
     width: 85%;
     margin: 10px auto 25px;
@@ -64,8 +61,24 @@ label{
 }
 .lead{
     white-space: pre-line;
-    text-align: center;
-
+    text-align: left;
+}
+.post_specific{
+    font-size: 25px;
+    color: #E8E8E8;
+    width: 80%;
+    height: 60vh;
+    margin-left: 10%;
+    min-height: auto;
+    background-color: #497959;
+    padding: 20px 30px;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: #B78240 solid 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow-y: auto;
 }
 
 button{
@@ -83,7 +96,11 @@ button:hover{
     background-color: blue;
     cursor: pointer;
 }
+.cross{
+    font-size: 4rem;
+    text-decoration: none;
 
+}
 .navbar-itemZ{
     /* display: inline-block; */
     float: right;
@@ -165,6 +182,29 @@ body{
     background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
 
 }
+.post_entries_page{
+    border: 2px solid;
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+    background-size: cover;
+    background-color: antiquewhite;
+}
+.first_hund{
+    color: black;
+}
+.entries_title{
+    border-bottom: 2px solid;
+    height: 75px;
+}
+.posts_all{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-column-gap: 3%;
+    grid-row-gap: 25px;
+    margin: auto;
+    justify-content: center;
+}
+
+
 .container{
     text-align: center;
     font-family: 'Roboto Mono', monospace;
@@ -174,6 +214,10 @@ body{
 }
 .form-group-hidden{
     visibility: hidden;
+    display: none;
+}
+
+.hideInput{
     display: none;
 }
 input{
@@ -199,6 +243,22 @@ input{
   background-repeat: no-repeat;
   position: relative;
 
+}
+.multiButtons{
+    display: flex;
+    flex-direction: row;
+    margin-left:37.5%;
+}
+.multiButtons form, .multiButtons a{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.new_plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
 }
 textarea{
     font-size: 25px;

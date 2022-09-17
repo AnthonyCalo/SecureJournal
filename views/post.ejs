@@ -1,8 +1,16 @@
 <%- include("partials/header"); %>
 
 <h1><%= postTitle %></h1>
-<p class="lead"><%= postBody %></p>
-<form action="/posts/<%= postId %>" method="POST">
-    <button onClick="return confirm('Are you sure you want to delete this')" type="submit">Delete</button>
-</form>
+<div class="post_specific">
+    <p class="lead"><%= postBody %></p>
+</div>
+<div class="multiButtons">
+    <form action="/posts/delete/<%= postId %>" method="POST">
+        <button onClick="return confirm('Are you sure you want to delete this')" type="submit">Delete</button>
+    </form>
+    <a href="/edit/<%= postId %>">
+        <button onClick=>Edit Post</button>
+    </a>
+</div>
+
 <%- include("partials/footer") %>

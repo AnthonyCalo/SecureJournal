@@ -21,7 +21,7 @@ app.use(express.static("public"));
 
 app.use(session({
   secret: process.env.SECRET,
-  resave: false,
+  resave: true,
   saveUninitialized: false,
 }))
 //required to use passport
@@ -140,6 +140,8 @@ app.route("/login")
     res.redirect("/login");
 })
 
+
+
 app.get('/compose', function(req, res){
   //checks if user is logged in. This is thanks to passport and sessions
   if(req.isAuthenticated()){
@@ -165,14 +167,52 @@ app.post('/compose', function(req, res){
   res.redirect('/');
 })
 
-app.get("/posts/:postName", function(req,res){
+
+//edit paths
+//----------------------------------------
+app.get("/edit/:postID", function(req, res){
   if(req.isAuthenticated()){
-    const requestTitle = req.params.postName;
-
-
-    blogPosts.findOne({title: requestTitle}, function(err, blog){
+    const requestId = req.params.postID;
+    blogPosts.findOne({_id: requestId}, function(err, blog){
       if(!err){
-        console.log(blog)
+        console.log(blog.title);
+        res.render("editEntry", {postTitle: blog.title, postBody: blog.post, postId:blog._id});
+      }else{
+        console.log("not a post");
+        res.send("Not a post");
+      }
+    });
+  }
+})
+
+app.post("/edit/:postID", function(req, res){
+  if(req.isAuthenticated()){
+    const postID = req.body.postID;
+
+    blogPosts.findOneAndUpdate({_id: postID}, {
+        post:req.body.postBody
+      }, (err, done)=>{
+        if(err) {
+          console.log(postID)
+          console.log(err, "<- ERROR")
+          throw err;
+        }
+        if(done){res.redirect('/entries'); console.log("succesful upate")}
+        else{res.send("error with finding post to update")}
+      })
+    }
+})
+
+//-------------------------------------------------
+
+app.get("/posts/:postID", function(req,res){
+  if(req.isAuthenticated()){
+    const requestId = req.params.postID;
+
+
+    blogPosts.findOne({_id: requestId}, function(err, blog){
+      if(!err){
+        console.log(blog.title);
         res.render("post", {postTitle: blog.title, postBody: blog.post, postId:blog._id});
       }else{
         console.log("not a post");
@@ -184,7 +224,7 @@ app.get("/posts/:postName", function(req,res){
   }
 })
 
-app.post("/posts/:postId", (req, res)=>{
+app.post("/posts/delete/:postId", (req, res)=>{
   //post request will come from entriesPage.ejs
   // need to add confirmation. Currently 2 easy to delete
   if(req.isAuthenticated()){

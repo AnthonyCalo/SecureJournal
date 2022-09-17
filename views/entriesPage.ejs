@@ -1,15 +1,24 @@
 <%- include("partials/header"); %>
 
-<!-- alternate way to do. regular for. NOT forEach like below -->
-<!-- <% for (var i =0; i < posts.length; i++){ %>
-    <h2> <%= posts[i].title %> </h2>
-    <p class="lead"> <%= posts[i].body %> </p>
-    <% } %>   -->
-<% posts.forEach(function(post){ %>
-    <h1><%= post.title %></h1>
-    <p class="lead"><%= post.post.substring(0, 100) + "..." %></p>
-    <a href="/posts/<%= post.title %>">Read more</a>
-<% }) %>
+<h1> Career Journal</h1>
+<br/>
+<div class="posts_all">
+        <% posts.forEach(function(post){ %>
+        <div class="post_entries_page">
+            <div class="entries_title">
+            <h2><%= post.title %></h2>
+            </div>  
+            <p class="first_hund"><%= post.post.substring(0, 100) + "..." %></p>
+            <a href="/posts/<%= post._id %>">Read more</a>
+        </div>
+
+        <% }) %>
+        <a href="/compose" class="post_entries_page new_plus">
+            <span class="cross">&#43;</span>
+            <p>Create New</p>
+        </a> 
+    </a>
+</div>
 
 <%- include("partials/footer") %>
 
